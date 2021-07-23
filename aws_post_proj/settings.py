@@ -37,9 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #app
     'aws_app',
+    'user_app',
+    #aws
     'storages',
+    #django-rest-framework
+    'rest_framework',
+    'rest_framework.authtoken',
+
+
+
+
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -143,4 +155,13 @@ AWS_SECRET_ACCESS_KEY = '9Y31m4MHrtntEglgd8eEpaRH4xlWhUrDAGwbvFJz'
 AWS_STORAGE_BUCKET_NAME = 'photo-share-bucket'
 
 
-DJANGO_SETTINGS_MODULE=mysite.settings
+
+#JWT-Authentication
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
